@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="profile-container">
+    <h1>ZéBarba</h1>
+    <h4>Meu Perfil</h4>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ userData?.nome }}</ion-card-title>
+        <ion-card-subtitle>{{ userData?.email }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Telefone:</strong> {{ userData?.telefone }}</p>
+        <p><strong>Endereço:</strong> {{ userData?.endereco }}</p>
+        <p *ngIf="userData?.licenca"><strong>Número da Licença:</strong> {{ userData?.licenca }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="full" color="danger" (click)="logout()">Sair</ion-button>
+  </div>
+</ion-content>
